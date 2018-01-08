@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="Architecture" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="f0m-1g-22U" id="uJX-F3-nIK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-9p-PcL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="407"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ObG-sw-gvU" appends="YES" id="4nu-nS-9Np"/>
+                    </connections>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9e6-4q-Wrg">
+                    <rect key="frame" x="0.0" y="407" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="Cancel" id="pd5-gM-FVc">
+                            <connections>
+                                <action selector="onCancelAction:" destination="-1" id="rz2-Aj-85h"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nDQ-G9-0Wm"/>
+                        <barButtonItem title="Done" id="zse-Ga-N86">
+                            <connections>
+                                <action selector="onDoneAction:" destination="-1" id="lar-j0-UvV"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="f0m-1g-22U">
+                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="534468178.86688298">
+                        <!--2017-12-08 23:22:58 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="f0m-1g-22U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="61d-To-osZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zGF-9p-PcL" secondAttribute="trailing" id="DUC-5r-WrA"/>
+                <constraint firstItem="9e6-4q-Wrg" firstAttribute="top" secondItem="zGF-9p-PcL" secondAttribute="bottom" id="GNq-qG-GK8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="zGF-9p-PcL" secondAttribute="top" constant="20" id="IEB-Jc-pyn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f0m-1g-22U" secondAttribute="bottom" id="Omt-Jy-pdU"/>
+                <constraint firstItem="9e6-4q-Wrg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PgZ-R3-peU"/>
+                <constraint firstItem="f0m-1g-22U" firstAttribute="top" secondItem="9e6-4q-Wrg" secondAttribute="bottom" id="Pu8-AE-pzV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9e6-4q-Wrg" secondAttribute="trailing" id="X1n-2B-d4V"/>
+                <constraint firstItem="zGF-9p-PcL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="juK-hA-Zvw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f0m-1g-22U" secondAttribute="trailing" id="yY2-mp-o3n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+        <tapGestureRecognizer id="ObG-sw-gvU">
+            <connections>
+                <action selector="onBackgroundTapAction:" destination="-1" id="Vkb-eT-JBa"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
