@@ -1,7 +1,7 @@
 # iOS UI Architectures
 
-![Xcode version](https://img.shields.io/badge/Xcode-9.2-blue.svg)
-![Swift version](https://img.shields.io/badge/Swift-4.0-blue.svg)
+![Xcode version](https://img.shields.io/badge/Xcode-10.0-blue.svg)
+![Swift version](https://img.shields.io/badge/Swift-4.2-blue.svg)
 ![Swiftlint version](https://img.shields.io/badge/Swiftlint-0.23.0-blue.svg)
 
 Part of brown bag/guild meeting to present some of the most commonly used iOS UI architectures.

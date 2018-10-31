@@ -124,7 +124,7 @@ final class TasksViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (_, index) in
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] _, index in
             guard let `self` = self, indexPath == index else { return }
 
             // FIXME: Direct network request

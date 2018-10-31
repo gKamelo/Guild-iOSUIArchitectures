@@ -14,6 +14,6 @@ struct AllTaskNetworkTask: NetworkTask {
     func parse(_ data: Any) -> [Task]? {
         guard let jsons = data as? [JSON] else { return nil }
 
-        return jsons.flatMap { Task(json: $0) }
+        return jsons.compactMap { Task(json: $0) }
     }
 }

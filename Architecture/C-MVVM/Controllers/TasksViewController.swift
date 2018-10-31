@@ -56,7 +56,7 @@ final class TasksViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (_, index) in
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] _, index in
             guard let `self` = self, indexPath == index else { return }
 
             self.viewModel.delete(at: index.row)
@@ -90,7 +90,7 @@ final class TasksViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - TasksViewModelDelegate
     func viewModelDidChange(to viewState: TasksViewModel.ViewState) {
         switch viewState {
-            case .init:
+            case .`init`:
                 self.emptyView.isHidden = true
                 self.tableView.isHidden = true
                 self.loaderIndicator.isHidden = true

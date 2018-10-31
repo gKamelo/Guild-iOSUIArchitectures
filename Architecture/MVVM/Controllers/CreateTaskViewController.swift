@@ -44,8 +44,8 @@ final class CreateTaskViewController: UIViewController, UITextViewDelegate, Crea
 
         self.viewModel.delegate = self
 
-        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardShowNotification(notification:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardHideNotification(notification:)), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardShowNotification(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardHideNotification(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -72,7 +72,7 @@ final class CreateTaskViewController: UIViewController, UITextViewDelegate, Crea
     // MARK: - CreateTaskViewModelDelegate
     func viewModelDidChange(to viewState: CreateTaskViewModel.ViewState) {
         switch viewState {
-            case .init:
+            case .`init`:
                 self.updateDescritpionField()
                 self.updateCreateAvailablity()
                 self.updateDateField()
